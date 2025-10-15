@@ -1,4 +1,4 @@
-# FSD-RevatureExercise
+# FSD-Revature-Exercise
 
 HTML + CSS (60 Mints)
 ------------
