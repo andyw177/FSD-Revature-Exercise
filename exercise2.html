@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const calculate = () => {
+            let num1 = prompt("Input first number");
+            let num2= prompt("Input second number");
+            let op = prompt("Input operations:  +, -, *, /");
+            let res;
+
+            switch (op) {
+                case '+':
+                    res = Number(num1) + Number(num2);
+                    break;
+                case '-':
+                    res = num1 - num2;
+                    break;
+                case '*':
+                    res = num1 * num2;
+                    break;
+                case '/':
+                    res = num1 / num2;
+                    break;
+                default:
+                    res = "invalid input"
+            }
+            alert(res);
+
+        }
+    </script>
+    <h4>Simple Calculator </h4>
+
+     <input type="button" value="calculate" onclick="calculate()">
+     
+
+    
+    
+</body>
+</html>

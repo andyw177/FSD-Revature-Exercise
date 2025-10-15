@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Temperature Converter</h1>
+    Input temperature: <input type="number" name="" id="num" minlength="1"> 
+    <select name="" id="operation">
+        <option value="">--Choose an operation--</option>
+        <option value="ctof">Celsius to Fahrenheit</option>
+        <option value="ftoc">Fahrenheit to Celsius</option>
+     </select>
+     <h3 id="conversion"></h3>
+     <script>
+        let operation = document.getElementById("operation");
+        let conversion = document.getElementById("conversion");
+        let num = document.getElementById("num");
+        operation.addEventListener("input",()=>{
+            console.log(operation.value);
+            if(operation.value === "ctof"){
+                let calc = (Number(num.value) - 32) * (5 / 9);
+                conversion.innerText = `${num.value} Celsius is ${calc} Fahrenheit`;
+            }else{
+                let calc = ((9/5) * Number(num.value) ) + 32;
+                conversion.innerText = `${num.value} Fahrenheit is ${calc} Celsius`;
+            }
+        })
+     </script>
+</body>
+</html>

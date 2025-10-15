@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>World Count </h1>
+    Input Text <input type="text" id="myTextField"> &nbsp;&nbsp;&nbsp;
+    Char Count: <span id="charCount"> 0</span> &nbsp;&nbsp;&nbsp;
+    Word Count: <span id="wordCount"> 0 </span>
+     <script>
+        // Get references to the input and a variable
+        const myInput = document.getElementById("myTextField");
+        const countC = document.getElementById("charCount");
+        const countW = document.getElementById("wordCount");
+
+
+        // console.log('My input', myInput);
+
+        // Update variable when input changes
+        myInput.addEventListener('input', (event) => {
+            myVariable = myInput.value;
+            let words = myVariable.split(" ");
+        
+            countW.textContent = words.length;
+
+            let chars = myVariable.replace(" ","");
+            console.log(chars.length, words.length);
+            countC.textContent = chars.length 
+        });
+    </script>
+</body>
+
+</html>
